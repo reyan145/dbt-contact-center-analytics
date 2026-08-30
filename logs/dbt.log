@@ -1,0 +1,81 @@
+[0m20:52:53.833955 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1ec51b7990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1ec51b4190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1ec53223d0>]}
+
+
+============================== 20:52:53.843336 | 61d6c96d-04eb-4380-b381-a3d35ab41ddd ==============================
+[0m20:52:53.843336 [info ] [MainThread]: Running with dbt=1.12.0
+[0m20:52:53.844483 [debug] [MainThread]: running dbt with arguments {'profiles_dir': '/home/quazi/.dbt', 'debug': 'False', 'indirect_selection': 'eager', 'empty': 'None', 'write_json': 'True', 'invocation_command': 'dbt init dbt_call_center', 'hints_enabled': 'True', 'log_path': 'logs', 'partial_parse': 'True', 'use_colors': 'True', 'printer_width': '80', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'send_anonymous_usage_stats': 'True', 'introspect': 'True', 'use_experimental_parser': 'False', 'fail_fast': 'False', 'log_cache_events': 'False', 'quiet': 'False', 'maximum_seed_size_mib': '1', 'log_format': 'default', 'warn_error': 'None', 'static_parser': 'True', 'no_print': 'None', 'cache_selected_only': 'False', 'version_check': 'True'}
+[0m20:52:53.866842 [debug] [MainThread]: Starter project path: /var/home/quazi/dbt-learn/jaffle_shop_duckdb/dbt-env-311/lib64/python3.11/site-packages/dbt/include/starter_project
+[0m20:52:53.871254 [info ] [MainThread]: Setting up your profile.
+[0m20:58:19.115653 [info ] [MainThread]: Profile dbt_call_center written to /home/quazi/.dbt/profiles.yml using target's profile_template.yml and your supplied values.
+[0m20:58:19.120669 [info ] [MainThread]: Running dbt debug to validate the project...
+[0m20:58:19.121473 [info ] [MainThread]: dbt version: 1.12.0
+[0m20:58:19.121880 [info ] [MainThread]: python version: 3.11.16
+[0m20:58:19.122239 [info ] [MainThread]: python path: /var/home/quazi/dbt-learn/jaffle_shop_duckdb/dbt-env-311/bin/python3.11
+[0m20:58:19.122623 [info ] [MainThread]: os info: Linux-7.2.0-ogc6.1.fc44.x86_64-x86_64-with-glibc2.43
+[0m20:58:19.185511 [info ] [MainThread]: Using profiles dir at /home/quazi/.dbt
+[0m20:58:19.186072 [info ] [MainThread]: Using profiles.yml file at /home/quazi/.dbt/profiles.yml
+[0m20:58:19.186465 [info ] [MainThread]: Using dbt_project.yml file at /var/home/quazi/dbt-call-center-analytics/dbt_call_center/dbt_project.yml
+[0m20:58:19.186840 [info ] [MainThread]: adapter type: bigquery
+[0m20:58:19.187197 [info ] [MainThread]: adapter version: 1.12.0
+[0m20:58:19.286359 [info ] [MainThread]: Configuration:
+[0m20:58:19.286927 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m20:58:19.287331 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m20:58:19.287707 [info ] [MainThread]: Required dependencies:
+[0m20:58:19.288091 [debug] [MainThread]: Executing "git --help"
+[0m20:58:19.300935 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   history    EXPERIMENTAL: Rewrite history\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Set `HEAD` or the index to a known state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m20:58:19.301546 [debug] [MainThread]: STDERR: "b''"
+[0m20:58:19.302020 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m20:58:19.302552 [info ] [MainThread]: Connection:
+[0m20:58:19.303153 [info ] [MainThread]:   method: oauth
+[0m20:58:19.303733 [info ] [MainThread]:   database: dbt-saas-analytics
+[0m20:58:19.304177 [info ] [MainThread]:   execution_project: dbt-saas-analytics
+[0m20:58:19.304641 [info ] [MainThread]:   schema: call_center_data
+[0m20:58:19.305070 [info ] [MainThread]:   location: US
+[0m20:58:19.305523 [info ] [MainThread]:   priority: interactive
+[0m20:58:19.305949 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m20:58:19.306375 [info ] [MainThread]:   reservation: None
+[0m20:58:19.306765 [info ] [MainThread]:   impersonate_service_account: None
+[0m20:58:19.307189 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m20:58:19.307811 [info ] [MainThread]:   job_retries: 1
+[0m20:58:19.308595 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m20:58:19.309106 [info ] [MainThread]:   job_execution_timeout_seconds: 300
+[0m20:58:19.309592 [info ] [MainThread]:   job_link_info_level_log: False
+[0m20:58:19.310051 [info ] [MainThread]:   timeout_seconds: 300
+[0m20:58:19.310508 [info ] [MainThread]:   client_id: None
+[0m20:58:19.310929 [info ] [MainThread]:   token_uri: None
+[0m20:58:19.311340 [info ] [MainThread]:   compute_region: None
+[0m20:58:19.311762 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m20:58:19.312495 [info ] [MainThread]:   gcs_bucket: None
+[0m20:58:19.313359 [info ] [MainThread]:   dataproc_batch: None
+[0m20:58:19.314806 [info ] [MainThread]: Registered adapter: bigquery=1.12.0
+[0m20:58:19.606723 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m20:58:19.607261 [debug] [MainThread]: On debug: select 1 as id
+[0m20:58:19.607731 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:58:22.708428 [debug] [MainThread]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dbt-saas-analytics&j=bq:US:cc747082-bc5b-4f0a-ad0c-aa498c05ff95&page=queryresults
+[0m20:58:23.263522 [debug] [MainThread]: SQL status: OK in 0.554 seconds
+[0m20:58:23.891957 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m20:58:23.892566 [info ] [MainThread]: [32mAll checks passed![0m
+[0m20:58:23.893036 [info ] [MainThread]: Your new dbt project "dbt_call_center" was created!
+Initialized new project in /var/home/quazi/dbt-call-center-analytics/dbt_call_center/dbt_call_center
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m20:58:23.897470 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 330.13785, "process_in_blocks": "540352", "process_kernel_time": 0.932389, "process_mem_max_rss": "225548", "process_out_blocks": "224", "process_user_time": 4.109717}
+[0m20:58:23.898444 [debug] [MainThread]: Command `dbt init` succeeded at 20:58:23.898336 after 330.14 seconds
+[0m20:58:23.898872 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m20:58:23.899360 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1ec5140250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1e99d97350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1ec51d6810>]}
+[0m20:58:23.901348 [debug] [MainThread]: Flushing usage events
+[0m20:58:25.520115 [debug] [MainThread]: An error was encountered while trying to flush usage events

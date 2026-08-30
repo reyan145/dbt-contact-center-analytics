@@ -1,0 +1,34 @@
+# dbt
+target/
+dbt_modules/
+dbt_packages/
+logs/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+ENV/
+env/
+dbt-call-env/
+
+# IDE
+.vscode/
+.idea/
+.DS_Store
+*.swp
+*.swo
+.env
+*.log
+
+# Seeds 
+seeds/*.csv
