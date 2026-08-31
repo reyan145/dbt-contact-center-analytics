@@ -1,0 +1,8 @@
+sources:
+  - name: contact_center
+    database: dbt-saas-analytics
+    schema: contact_center_data
+    tables:
+      - name: calls
+      - name: agents
+      - name: surveys
