@@ -2,7 +2,7 @@ name: 'dbt_contact_center'
 version: '1.0.0'
 config-version: 2
 
-profile: 'dbt_call_center'   # ← New profile name
+profile: 'dbt_contact_center'   # ← New profile name
 
 model-paths: ["models"]
 seed-paths: ["seeds"]
@@ -13,7 +13,7 @@ target-path: "target"
 clean-targets: ["target", "dbt_modules", "logs"]
 
 models:
-  dbt_call_center:
+  dbt_contact_center:
     staging:
       +materialized: view
     intermediate:

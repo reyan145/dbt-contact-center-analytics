@@ -5,8 +5,12 @@ exposures:
     label: "Contact Center Dashboard"
     type: dashboard
     maturity: high
-    url: https://lookerstudio.google.com/   # Replace with your link later
+    url: https://lookerstudio.google.com/   # Replace with your actual link later
     description: "Executive dashboard showing call volume, AHT, FCR, and CSAT."
+
+    owner:
+      name: "Quazi"
+      email: "reyan145@gmail.com"
 
     depends_on:
       - ref('fct_daily_call_metrics')

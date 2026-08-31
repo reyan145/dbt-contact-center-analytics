@@ -3,6 +3,5 @@ select
     call_id,
     csat_score,
     resolution_status
-from {{ ref('stg_surveys') }}
-left join {{ ref('stg_calls') }} using (call_id)
-where resolution_status = 'Unresolved' and csat_score >= 4
+from {{ ref('int_surveys_cleaned') }}
+where resolution_status = 'Unresolved' and csat_score = 5

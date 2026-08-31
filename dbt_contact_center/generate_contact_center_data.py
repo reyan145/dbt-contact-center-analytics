@@ -80,7 +80,7 @@ for call in survey_calls:
         csat = random.choices([5, 4, 3, 2, 1], weights=[0.6, 0.25, 0.1, 0.03, 0.02])[0]
         sentiment = random.choices(['Positive', 'Neutral', 'Negative'], weights=[0.7, 0.2, 0.1])[0]
     elif call['resolution_status'] == 'Unresolved' or call['wait_time_seconds'] > 120:
-        csat = random.choices([5, 4, 3, 2, 1], weights=[0.05, 0.1, 0.2, 0.35, 0.3])[0]
+        csat = random.choices([5, 4, 3, 2, 1], weights=[0.0, 0.05, 0.15, 0.35, 0.45])[0]
         sentiment = random.choices(['Positive', 'Neutral', 'Negative'], weights=[0.1, 0.2, 0.7])[0]
     else:
         csat = random.choices([5, 4, 3, 2, 1], weights=[0.2, 0.4, 0.25, 0.1, 0.05])[0]
