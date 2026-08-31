@@ -1,0 +1,13 @@
+version: 2
+
+exposures:
+  - name: contact_center_dashboard
+    label: "Contact Center Dashboard"
+    type: dashboard
+    maturity: high
+    url: https://lookerstudio.google.com/   # Replace with your link later
+    description: "Executive dashboard showing call volume, AHT, FCR, and CSAT."
+
+    depends_on:
+      - ref('fct_daily_call_metrics')
+      - ref('dim_agents')
