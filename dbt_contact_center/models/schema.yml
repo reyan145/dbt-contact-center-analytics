@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: dim_agents
+    description: "Dimension table for agents"
+    columns:
+      - name: agent_id
+        description: "Primary key for agents"
+        tests:
+          - unique
+          - not_null
+
+  - name: fct_daily_call_metrics
+    description: "Daily aggregated call metrics"
+    columns:
+      - name: call_date
+        description: "Date of the call"
+        tests:
+          - not_null
