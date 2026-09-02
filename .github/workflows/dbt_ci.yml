@@ -21,9 +21,10 @@ jobs:
       - name: Install dependencies
         run: dbt deps
 
-      - name: Create dbt profiles.yml
+      - name: Create dbt profiles.yml in default location
         run: |
-          cat > profiles.yml << EOF
+          mkdir -p ~/.dbt
+          cat > ~/.dbt/profiles.yml << EOF
           dbt_contact_center:
             outputs:
               dev:
@@ -40,14 +41,8 @@ jobs:
         run: |
           echo '${{ secrets.DBT_BIGQUERY_KEYFILE_JSON }}' > /tmp/keyfile.json
 
-      - name: Debug current directory
-        run: |
-          pwd
-          ls -la
-          echo "--- profiles.yml ---"
-          cat profiles.yml || echo "profiles.yml not found"
+      - name: Verify profiles.yml exists
+        run: cat ~/.dbt/profiles.yml
 
       - name: Run dbt tests
-        env:
-          DBT_PROFILES_DIR: ${{ github.workspace }}
         run: dbt test
