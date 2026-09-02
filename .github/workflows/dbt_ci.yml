@@ -21,10 +21,15 @@ jobs:
       - name: Install dependencies
         run: dbt deps
 
-      - name: Create dbt profiles.yml in default location
+      - name: Set up BigQuery credentials
         run: |
-          mkdir -p ~/.dbt
-          cat > ~/.dbt/profiles.yml << EOF
+          echo '${{ secrets.DBT_BIGQUERY_KEYFILE_JSON }}' > /tmp/keyfile.json
+
+      - name: Run dbt tests
+        env:
+          DBT_PROFILES_DIR: .
+        run: |
+          cat > profiles.yml << EOF
           dbt_contact_center:
             outputs:
               dev:
@@ -36,13 +41,4 @@ jobs:
                 keyfile: /tmp/keyfile.json
             target: dev
           EOF
-
-      - name: Set up BigQuery service account key
-        run: |
-          echo '${{ secrets.DBT_BIGQUERY_KEYFILE_JSON }}' > /tmp/keyfile.json
-
-      - name: Verify profiles.yml exists
-        run: cat ~/.dbt/profiles.yml
-
-      - name: Run dbt tests
-        run: dbt test
+          dbt test
