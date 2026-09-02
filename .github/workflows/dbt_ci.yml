@@ -7,6 +7,7 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v3
 
@@ -19,9 +20,29 @@ jobs:
           pip install dbt-core dbt-bigquery
 
       - name: Install dependencies
-        run: |
-          dbt deps
+        run: dbt deps
 
-      - name: Run tests
+      - name: Create dbt profiles.yml
         run: |
-          dbt test
+          mkdir -p ~/.dbt
+          cat > ~/.dbt/profiles.yml << EOF
+          dbt_contact_center:
+            outputs:
+              dev:
+                type: bigquery
+                method: service-account
+                project: ${{ secrets.DBT_BIGQUERY_PROJECT }}
+                dataset: ${{ secrets.DBT_BIGQUERY_DATASET }}
+                threads: 4
+                keyfile: /tmp/keyfile.json
+            target: dev
+          EOF
+
+      - name: Set up BigQuery service account key
+        run: |
+          echo '${{ secrets.DBT_BIGQUERY_KEYFILE_JSON }}' > /tmp/keyfile.json
+        env:
+          DBT_BIGQUERY_KEYFILE_JSON: ${{ secrets.DBT_BIGQUERY_KEYFILE_JSON }}
+
+      - name: Run dbt tests
+        run: dbt test
