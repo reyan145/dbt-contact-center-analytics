@@ -40,5 +40,13 @@ jobs:
         run: |
           echo '${{ secrets.DBT_BIGQUERY_KEYFILE_JSON }}' > /tmp/keyfile.json
 
+      - name: Debug current directory
+        run: |
+          pwd
+          ls -la
+          cat profiles.yml || echo "profiles.yml not found"
+
       - name: Run dbt tests
-        run: dbt test --profiles-dir .
+        run: |
+          unset DBT_PROFILES_DIR
+          dbt test --profiles-dir ${{ github.workspace }}
