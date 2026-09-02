@@ -44,9 +44,10 @@ jobs:
         run: |
           pwd
           ls -la
+          echo "--- profiles.yml ---"
           cat profiles.yml || echo "profiles.yml not found"
 
       - name: Run dbt tests
-        run: |
-          unset DBT_PROFILES_DIR
-          dbt test --profiles-dir ${{ github.workspace }}
+        env:
+          DBT_PROFILES_DIR: ${{ github.workspace }}
+        run: dbt test
