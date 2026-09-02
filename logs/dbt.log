@@ -79,3 +79,81 @@ Happy modeling!
 [0m20:58:23.899360 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1ec5140250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1e99d97350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1ec51d6810>]}
 [0m20:58:23.901348 [debug] [MainThread]: Flushing usage events
 [0m20:58:25.520115 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:01:50.256846 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f579751f710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5797514250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5797668290>]}
+
+
+============================== 17:01:50.264162 | c90eff40-59a4-40a2-87a8-97ff66d63cdd ==============================
+[0m17:01:50.264162 [info ] [MainThread]: Running with dbt=1.12.0
+[0m17:01:50.264886 [debug] [MainThread]: running dbt with arguments {'hints_enabled': 'True', 'log_path': 'logs', 'write_json': 'True', 'no_print': 'None', 'log_cache_events': 'False', 'empty': 'False', 'printer_width': '80', 'use_experimental_parser': 'False', 'profiles_dir': '/home/quazi/.dbt', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'use_colors': 'True', 'send_anonymous_usage_stats': 'True', 'invocation_command': 'dbt run --select fct_call_metrics', 'target_path': 'None', 'debug': 'False', 'quiet': 'False', 'indirect_selection': 'eager', 'cache_selected_only': 'False', 'fail_fast': 'False', 'version_check': 'True', 'maximum_seed_size_mib': '1', 'introspect': 'True', 'partial_parse': 'True', 'warn_error': 'None', 'log_format': 'default', 'static_parser': 'True'}
+[0m17:01:50.265583 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /var/home/quazi/dbt-contact-center-analytics/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m17:01:50.267065 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.07816022, "process_in_blocks": "121296", "process_kernel_time": 0.4789, "process_mem_max_rss": "114640", "process_out_blocks": "8", "process_user_time": 1.680632}
+[0m17:01:50.267709 [debug] [MainThread]: Command `dbt run` failed at 17:01:50.267616 after 0.08 seconds
+[0m17:01:50.268197 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5797529850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f579751c150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f579751fc50>]}
+[0m17:01:50.268665 [debug] [MainThread]: Flushing usage events
+[0m17:01:52.753520 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:01:54.961585 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0f237623d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0f202e8bd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0f20429f90>]}
+
+
+============================== 17:01:54.967362 | c054716d-177d-4cfa-9764-79cf26afcd75 ==============================
+[0m17:01:54.967362 [info ] [MainThread]: Running with dbt=1.12.0
+[0m17:01:54.968087 [debug] [MainThread]: running dbt with arguments {'warn_error': 'None', 'static_parser': 'True', 'no_print': 'None', 'log_format': 'default', 'log_path': 'logs', 'quiet': 'False', 'use_colors': 'True', 'indirect_selection': 'eager', 'profiles_dir': '/home/quazi/.dbt', 'log_cache_events': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'fail_fast': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'debug': 'False', 'printer_width': '80', 'use_experimental_parser': 'False', 'version_check': 'True', 'invocation_command': 'dbt run --select fct_agent_metrics', 'maximum_seed_size_mib': '1', 'empty': 'False', 'hints_enabled': 'True', 'write_json': 'True', 'send_anonymous_usage_stats': 'True', 'introspect': 'True', 'target_path': 'None'}
+[0m17:01:54.968763 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /var/home/quazi/dbt-contact-center-analytics/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m17:01:54.969894 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.075450085, "process_in_blocks": "0", "process_kernel_time": 0.293986, "process_mem_max_rss": "114044", "process_out_blocks": "8", "process_user_time": 1.613926}
+[0m17:01:54.970505 [debug] [MainThread]: Command `dbt run` failed at 17:01:54.970408 after 0.08 seconds
+[0m17:01:54.970994 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0f203888d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0f2038a990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0f20567c10>]}
+[0m17:01:54.971481 [debug] [MainThread]: Flushing usage events
+[0m17:01:56.128424 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:02:05.718485 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3133b3c390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3133c1b450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3133b44bd0>]}
+
+
+============================== 17:02:05.724544 | bd183617-c3df-490a-9cba-6185732057ea ==============================
+[0m17:02:05.724544 [info ] [MainThread]: Running with dbt=1.12.0
+[0m17:02:05.725215 [debug] [MainThread]: running dbt with arguments {'write_json': 'True', 'indirect_selection': 'eager', 'log_format': 'default', 'no_print': 'None', 'version_check': 'True', 'fail_fast': 'False', 'use_experimental_parser': 'False', 'invocation_command': 'dbt run', 'log_path': 'logs', 'introspect': 'True', 'printer_width': '80', 'send_anonymous_usage_stats': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'cache_selected_only': 'False', 'debug': 'False', 'hints_enabled': 'True', 'profiles_dir': '/home/quazi/.dbt', 'warn_error': 'None', 'empty': 'False', 'partial_parse': 'True', 'use_colors': 'True', 'maximum_seed_size_mib': '1', 'target_path': 'None', 'static_parser': 'True', 'quiet': 'False', 'log_cache_events': 'False'}
+[0m17:02:05.725901 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /var/home/quazi/dbt-contact-center-analytics/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m17:02:05.727023 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.07514858, "process_in_blocks": "0", "process_kernel_time": 0.294937, "process_mem_max_rss": "114240", "process_out_blocks": "0", "process_user_time": 1.643651}
+[0m17:02:05.727660 [debug] [MainThread]: Command `dbt run` failed at 17:02:05.727563 after 0.08 seconds
+[0m17:02:05.728191 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3133c21a50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3133c1a690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3133c1bd50>]}
+[0m17:02:05.728699 [debug] [MainThread]: Flushing usage events
+[0m17:02:06.851617 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:26:49.942223 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5ef2d0d010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5eef86bf10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5eef99ea50>]}
+
+
+============================== 18:26:49.949269 | 6dfb8ee4-3b22-45a3-8bfe-dbb6313eaa3b ==============================
+[0m18:26:49.949269 [info ] [MainThread]: Running with dbt=1.12.0
+[0m18:26:49.950675 [debug] [MainThread]: running dbt with arguments {'warn_error': 'None', 'printer_width': '80', 'fail_fast': 'False', 'log_format': 'default', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'use_colors': 'True', 'partial_parse': 'True', 'no_print': 'None', 'debug': 'False', 'introspect': 'True', 'log_path': 'logs', 'empty': 'False', 'cache_selected_only': 'False', 'target_path': 'None', 'maximum_seed_size_mib': '1', 'invocation_command': 'dbt run', 'hints_enabled': 'True', 'profiles_dir': '/home/quazi/.dbt', 'write_json': 'True', 'quiet': 'False', 'version_check': 'True', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True', 'use_experimental_parser': 'False'}
+[0m18:26:49.951615 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /var/home/quazi/dbt-contact-center-analytics/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m18:26:49.952879 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.08687228, "process_in_blocks": "73624", "process_kernel_time": 0.442294, "process_mem_max_rss": "114428", "process_out_blocks": "8", "process_user_time": 1.99533}
+[0m18:26:49.953566 [debug] [MainThread]: Command `dbt run` failed at 18:26:49.953459 after 0.09 seconds
+[0m18:26:49.954030 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5eef91f610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5eef91f0d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5eef997e10>]}
+[0m18:26:49.954525 [debug] [MainThread]: Flushing usage events
+[0m18:26:51.074015 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:28:28.126764 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff2fe5e4850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff2fe56e8d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff2fe5e4290>]}
+
+
+============================== 20:28:28.132485 | ee58031d-54bb-474f-b75a-bb96bce2b261 ==============================
+[0m20:28:28.132485 [info ] [MainThread]: Running with dbt=1.12.3
+[0m20:28:28.133202 [debug] [MainThread]: running dbt with arguments {'introspect': 'True', 'printer_width': '80', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'write_json': 'True', 'invocation_command': 'dbt ', 'empty': 'None', 'use_experimental_parser': 'False', 'send_anonymous_usage_stats': 'True', 'hints_enabled': 'True', 'static_parser': 'True', 'quiet': 'False', 'debug': 'False', 'use_colors': 'True', 'version_check': 'True', 'target_path': 'None', 'log_path': '/home/quazi/dbt-contact-center-analytics/logs', 'profiles_dir': '/home/quazi/.dbt', 'cache_selected_only': 'False', 'maximum_seed_size_mib': '1', 'no_print': 'None', 'indirect_selection': 'eager', 'partial_parse': 'True', 'fail_fast': 'False', 'warn_error': 'None', 'log_cache_events': 'False', 'log_format': 'default'}
+[0m20:28:28.252606 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'ee58031d-54bb-474f-b75a-bb96bce2b261', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff2fe6f2ad0>]}
+[0m20:28:28.269948 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m20:28:28.271220 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m20:28:28.272856 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_success": true, "command_wall_clock_time": 0.2211843, "process_in_blocks": "600", "process_kernel_time": 0.261894, "process_mem_max_rss": "117716", "process_out_blocks": "144", "process_user_time": 1.78028}
+[0m20:28:28.273566 [debug] [MainThread]: Command `cli deps` succeeded at 20:28:28.273434 after 0.22 seconds
+[0m20:28:28.274017 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff2fe6f2f90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff2fe5e4d90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff2fe81c350>]}
+[0m20:28:28.274471 [debug] [MainThread]: Flushing usage events
+[0m20:28:29.819535 [debug] [MainThread]: An error was encountered while trying to flush usage events
