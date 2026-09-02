@@ -16,23 +16,21 @@ jobs:
           python-version: '3.11'
 
       - name: Install dbt
-        run: |
-          pip install dbt-core dbt-bigquery
+        run: pip install dbt-core dbt-bigquery
 
       - name: Install dependencies
         run: dbt deps
 
       - name: Create dbt profiles.yml
         run: |
-          mkdir -p ~/.dbt
-          cat > ~/.dbt/profiles.yml << EOF
+          cat > profiles.yml << EOF
           dbt_contact_center:
             outputs:
               dev:
                 type: bigquery
                 method: service-account
-                project: ${{ secrets.DBT_BIGQUERY_PROJECT }}
-                dataset: ${{ secrets.DBT_BIGQUERY_DATASET }}
+                project: dbt-saas-analytics
+                dataset: contact_center_data
                 threads: 4
                 keyfile: /tmp/keyfile.json
             target: dev
@@ -41,8 +39,6 @@ jobs:
       - name: Set up BigQuery service account key
         run: |
           echo '${{ secrets.DBT_BIGQUERY_KEYFILE_JSON }}' > /tmp/keyfile.json
-        env:
-          DBT_BIGQUERY_KEYFILE_JSON: ${{ secrets.DBT_BIGQUERY_KEYFILE_JSON }}
 
       - name: Run dbt tests
-        run: dbt test
+        run: dbt test --profiles-dir .
