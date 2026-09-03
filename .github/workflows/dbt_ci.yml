@@ -25,13 +25,23 @@ jobs:
       - name: Install dbt dependencies
         run: dbt deps
 
-      - name: Set up BigQuery credentials
+      - name: Setup credentials and profiles (with logging)
         run: |
+          echo "============================================"
+          echo "STEP 1: Creating keyfile"
+          echo "============================================"
           mkdir -p /tmp
           echo '${{ secrets.DBT_BIGQUERY_KEYFILE_JSON }}' > /tmp/keyfile.json
+          echo "Keyfile created at /tmp/keyfile.json"
+          echo "Keyfile size: $(wc -c < /tmp/keyfile.json) bytes"
+          echo "First 100 chars of keyfile:"
+          head -c 100 /tmp/keyfile.json
+          echo ""
+          echo ""
 
-      - name: Run dbt tests
-        run: |
+          echo "============================================"
+          echo "STEP 2: Creating profiles.yml"
+          echo "============================================"
           cat > profiles.yml << 'EOF'
           dbt_contact_center:
             outputs:
@@ -44,4 +54,44 @@ jobs:
                 keyfile: /tmp/keyfile.json
             target: dev
           EOF
+
+          echo "profiles.yml created in: $(pwd)"
+          echo "Content of profiles.yml:"
+          cat profiles.yml
+          echo ""
+
+          echo "============================================"
+          echo "STEP 3: Directory contents"
+          echo "============================================"
+          ls -la
+          echo ""
+
+          echo "============================================"
+          echo "STEP 4: Verifying files exist"
+          echo "============================================"
+          if [ -f profiles.yml ]; then
+            echo "✅ profiles.yml exists"
+          else
+            echo "❌ profiles.yml NOT FOUND"
+            exit 1
+          fi
+
+          if [ -f /tmp/keyfile.json ]; then
+            echo "✅ /tmp/keyfile.json exists"
+          else
+            echo "❌ /tmp/keyfile.json NOT FOUND"
+            exit 1
+          fi
+
+      - name: Run dbt tests with debug
+        env:
+          DBT_PROFILES_DIR: .
+        run: |
+          echo "============================================"
+          echo "STEP 5: Running dbt test"
+          echo "============================================"
+          echo "Current directory: $(pwd)"
+          echo "DBT_PROFILES_DIR = $DBT_PROFILES_DIR"
+          echo "Command to run: dbt test --profiles-dir ."
+          echo "--------------------------------------------"
           dbt test --profiles-dir .
