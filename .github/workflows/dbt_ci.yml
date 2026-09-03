@@ -9,31 +9,21 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
-      - name: Set up Python
-        uses: actions/setup-python@v4
+      - uses: actions/setup-python@v4
         with:
           python-version: '3.11'
 
-      - name: Install dbt and BigQuery adapter
+      - name: Install dbt
+        run: pip install dbt-core dbt-bigquery
+
+      - name: Create dbt profiles directory
+        run: mkdir -p ~/.dbt
+
+      - name: Create dbt profiles.yml
         run: |
-          pip install --upgrade pip
-          pip install dbt-core dbt-bigquery
-
-      - name: Install dbt dependencies
-        run: dbt deps
-
-      - name: Setup credentials and profiles
-        run: |
-          echo "Creating keyfile..."
-          mkdir -p /tmp
-          echo '${{ secrets.DBT_BIGQUERY_KEYFILE_JSON }}' > /tmp/keyfile.json
-          echo "Keyfile size: $(wc -c < /tmp/keyfile.json) bytes"
-
-          echo "Creating profiles.yml..."
-          cat > profiles.yml << 'EOF'
+          cat > ~/.dbt/profiles.yml << 'EOF'
           dbt_contact_center:
             outputs:
               dev:
@@ -42,15 +32,16 @@ jobs:
                 project: dbt-saas-analytics
                 dataset: contact_center_data
                 threads: 4
-                keyfile: /tmp/keyfile.json
+                keyfile: /tmp/bq-key.json
             target: dev
           EOF
 
-          echo "profiles.yml content:"
-          cat profiles.yml
-
-      - name: Run dbt tests
+      - name: Setup BigQuery credentials
         run: |
-          echo "Current directory: $(pwd)"
-          ls -la
-          dbt test --profiles-dir .
+          echo '${{ secrets.DBT_BIGQUERY_KEYFILE_JSON }}' > /tmp/bq-key.json
+
+      - name: Install dependencies
+        run: dbt deps
+
+      - name: Run tests
+        run: dbt test
