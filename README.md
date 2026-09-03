@@ -133,4 +133,4 @@ This was built as a portfolio project to demonstrate:
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
