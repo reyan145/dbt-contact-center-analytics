@@ -28,7 +28,7 @@ This project takes raw data from a contact center (calls, agents, surveys) and t
 
 The data feeds into a Power BI dashboard for real-time visibility.
 
-👉 **[View Power BI Dashboard](https://app.powerbi.com/view?r=eyJrIjoiZWEwYTQ2NmMtODg0ZS00OTBjLTkyMjUtZDNjYjE2MWY3MzBkIiwidCI6IjJmODc0OTkzLTM0ZGMtNGVkZi1iNmRhLTZkMzllMjAyYzFlNyIsImMiOjEwfQ%3D%3D)**
+👉 **[View Power BI Dashboard](https://app.powerbi.com/view?r=eyJrIjoiY2EyY2RhYjUtNjRhNC00MDRmLWE1NzEtMzc4NDVmNGFmMDc0IiwidCI6IjJmODc0OTkzLTM0ZGMtNGVkZi1iNmRhLTZkMzllMjAyYzFlNyIsImMiOjEwfQ%3D%3D)**
 
 ![Dashboard screenshot](docs/dashboard.png)
 
