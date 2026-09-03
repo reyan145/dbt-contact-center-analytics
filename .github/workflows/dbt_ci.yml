@@ -9,27 +9,30 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-      - uses: actions/setup-python@v4
+      - name: Set up Python
+        uses: actions/setup-python@v4
         with:
           python-version: '3.11'
 
-      - name: Install dbt
-        run: pip install dbt-core dbt-bigquery
+      - name: Install dbt and BigQuery adapter
+        run: |
+          pip install --upgrade pip
+          pip install dbt-core dbt-bigquery
 
-      - name: Install dependencies
+      - name: Install dbt dependencies
         run: dbt deps
 
       - name: Set up BigQuery credentials
         run: |
+          mkdir -p /tmp
           echo '${{ secrets.DBT_BIGQUERY_KEYFILE_JSON }}' > /tmp/keyfile.json
 
       - name: Run dbt tests
-        env:
-          DBT_PROFILES_DIR: .
         run: |
-          cat > profiles.yml << EOF
+          cat > profiles.yml << 'EOF'
           dbt_contact_center:
             outputs:
               dev:
@@ -41,4 +44,4 @@ jobs:
                 keyfile: /tmp/keyfile.json
             target: dev
           EOF
-          dbt test
+          dbt test --profiles-dir .

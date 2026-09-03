@@ -157,3 +157,237 @@ Runtime Error
 [0m20:28:28.274017 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff2fe6f2f90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff2fe5e4d90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff2fe81c350>]}
 [0m20:28:28.274471 [debug] [MainThread]: Flushing usage events
 [0m20:28:29.819535 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:38:49.426221 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe4290efa10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe428f618d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe4290ed910>]}
+
+
+============================== 20:38:49.432838 | ffa3010d-e0ec-48f7-ac13-a24df2144cb2 ==============================
+[0m20:38:49.432838 [info ] [MainThread]: Running with dbt=1.12.0
+[0m20:38:49.433638 [debug] [MainThread]: running dbt with arguments {'quiet': 'False', 'static_parser': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'write_json': 'True', 'send_anonymous_usage_stats': 'True', 'empty': 'None', 'use_colors': 'True', 'log_format': 'default', 'indirect_selection': 'eager', 'fail_fast': 'False', 'maximum_seed_size_mib': '1', 'profiles_dir': '/home/quazi/.dbt', 'use_experimental_parser': 'False', 'log_cache_events': 'False', 'debug': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_path': '/var/home/quazi/dbt-contact-center-analytics/logs', 'invocation_command': 'dbt test', 'version_check': 'True', 'printer_width': '80', 'no_print': 'None', 'introspect': 'True', 'hints_enabled': 'True', 'target_path': 'None', 'warn_error': 'None'}
+[0m20:38:50.834855 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'ffa3010d-e0ec-48f7-ac13-a24df2144cb2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe42bf017d0>]}
+[0m20:38:50.896401 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'ffa3010d-e0ec-48f7-ac13-a24df2144cb2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe42c3415d0>]}
+[0m20:38:50.897458 [info ] [MainThread]: Registered adapter: bigquery=1.12.0
+[0m20:38:51.152297 [debug] [MainThread]: checksum: b28f7c7f716825117975605681295eb6b686ae5034960cc9ff96f2d0bdda672c, vars: {}, profile: dbt_contact_center, target: dev, version: 1.12.0
+[0m20:38:51.299513 [info ] [MainThread]: Unable to do partial parsing because of a version mismatch
+[0m20:38:51.300205 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'ffa3010d-e0ec-48f7-ac13-a24df2144cb2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe42a455090>]}
+[0m20:38:53.178438 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'ffa3010d-e0ec-48f7-ac13-a24df2144cb2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe3f7b0b550>]}
+[0m20:38:53.330763 [debug] [MainThread]: Wrote artifact WritableManifest to /var/home/quazi/dbt-contact-center-analytics/target/manifest.json
+[0m20:38:53.335896 [debug] [MainThread]: Wrote artifact SemanticManifest to /var/home/quazi/dbt-contact-center-analytics/target/semantic_manifest.json
+[0m20:38:53.359573 [debug] [MainThread]: Wrote artifact OsiDocument to /var/home/quazi/dbt-contact-center-analytics/target/osi_document.json
+[0m20:38:53.388585 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'ffa3010d-e0ec-48f7-ac13-a24df2144cb2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe3f75a9390>]}
+[0m20:38:53.389345 [info ] [MainThread]: Found 9 models, 4 data tests, 3 seeds, 3 sources, 1 exposure, 562 macros
+[0m20:38:53.389813 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ffa3010d-e0ec-48f7-ac13-a24df2144cb2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe3f75b3d50>]}
+[0m20:38:53.392023 [info ] [MainThread]: 
+[0m20:38:53.392605 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m20:38:53.393015 [info ] [MainThread]: 
+[0m20:38:53.393665 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m20:38:53.399394 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_dbt-saas-analytics_contact_center_data'
+[0m20:38:53.400747 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:38:56.331148 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ffa3010d-e0ec-48f7-ac13-a24df2144cb2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe3f77ea710>]}
+[0m20:38:56.331812 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:38:56.345210 [debug] [Thread-1 (]: Began running node test.dbt_contact_center.not_null_dim_agents_agent_id.716629bb1b
+[0m20:38:56.345834 [debug] [Thread-2 (]: Began running node test.dbt_contact_center.not_null_fct_daily_call_metrics_call_date.82beb99ca8
+[0m20:38:56.346590 [debug] [Thread-3 (]: Began running node test.dbt_contact_center.test_csat_logic
+[0m20:38:56.347395 [info ] [Thread-1 (]: 1 of 4 START test not_null_dim_agents_agent_id ................................. [RUN]
+[0m20:38:56.348157 [debug] [Thread-4 (]: Began running node test.dbt_contact_center.unique_dim_agents_agent_id.cfe6536975
+[0m20:38:56.348950 [info ] [Thread-2 (]: 2 of 4 START test not_null_fct_daily_call_metrics_call_date .................... [RUN]
+[0m20:38:56.349581 [info ] [Thread-3 (]: 3 of 4 START test test_csat_logic .............................................. [RUN]
+[0m20:38:56.350312 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_dbt-saas-analytics_contact_center_data, now test.dbt_contact_center.not_null_dim_agents_agent_id.716629bb1b)
+[0m20:38:56.350884 [info ] [Thread-4 (]: 4 of 4 START test unique_dim_agents_agent_id ................................... [RUN]
+[0m20:38:56.351609 [debug] [Thread-2 (]: Acquiring new bigquery connection 'test.dbt_contact_center.not_null_fct_daily_call_metrics_call_date.82beb99ca8'
+[0m20:38:56.352257 [debug] [Thread-3 (]: Acquiring new bigquery connection 'test.dbt_contact_center.test_csat_logic'
+[0m20:38:56.352772 [debug] [Thread-1 (]: Began compiling node test.dbt_contact_center.not_null_dim_agents_agent_id.716629bb1b
+[0m20:38:56.353435 [debug] [Thread-4 (]: Acquiring new bigquery connection 'test.dbt_contact_center.unique_dim_agents_agent_id.cfe6536975'
+[0m20:38:56.354132 [debug] [Thread-2 (]: Began compiling node test.dbt_contact_center.not_null_fct_daily_call_metrics_call_date.82beb99ca8
+[0m20:38:56.355004 [debug] [Thread-3 (]: Began compiling node test.dbt_contact_center.test_csat_logic
+[0m20:38:56.376842 [debug] [Thread-4 (]: Began compiling node test.dbt_contact_center.unique_dim_agents_agent_id.cfe6536975
+[0m20:38:56.380019 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_contact_center.not_null_dim_agents_agent_id.716629bb1b"
+[0m20:38:56.390148 [debug] [Thread-2 (]: Writing injected SQL for node "test.dbt_contact_center.not_null_fct_daily_call_metrics_call_date.82beb99ca8"
+[0m20:38:56.392242 [debug] [Thread-3 (]: Writing injected SQL for node "test.dbt_contact_center.test_csat_logic"
+[0m20:38:56.403101 [debug] [Thread-4 (]: Writing injected SQL for node "test.dbt_contact_center.unique_dim_agents_agent_id.cfe6536975"
+[0m20:38:56.404649 [debug] [Thread-1 (]: Began executing node test.dbt_contact_center.not_null_dim_agents_agent_id.716629bb1b
+[0m20:38:56.417089 [debug] [Thread-2 (]: Began executing node test.dbt_contact_center.not_null_fct_daily_call_metrics_call_date.82beb99ca8
+[0m20:38:56.423269 [debug] [Thread-4 (]: Began executing node test.dbt_contact_center.unique_dim_agents_agent_id.cfe6536975
+[0m20:38:56.423863 [debug] [Thread-3 (]: Began executing node test.dbt_contact_center.test_csat_logic
+[0m20:38:56.428746 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_contact_center.not_null_dim_agents_agent_id.716629bb1b"
+[0m20:38:56.432104 [debug] [Thread-2 (]: Writing runtime sql for node "test.dbt_contact_center.not_null_fct_daily_call_metrics_call_date.82beb99ca8"
+[0m20:38:56.434169 [debug] [Thread-4 (]: Writing runtime sql for node "test.dbt_contact_center.unique_dim_agents_agent_id.cfe6536975"
+[0m20:38:56.436689 [debug] [Thread-3 (]: Writing runtime sql for node "test.dbt_contact_center.test_csat_logic"
+[0m20:38:56.438252 [debug] [Thread-1 (]: On test.dbt_contact_center.not_null_dim_agents_agent_id.716629bb1b: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_contact_center", "target_name": "dev", "node_id": "test.dbt_contact_center.not_null_dim_agents_agent_id.716629bb1b"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select agent_id
+from `dbt-saas-analytics`.`contact_center_data`.`dim_agents`
+where agent_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m20:38:56.439749 [debug] [Thread-4 (]: On test.dbt_contact_center.unique_dim_agents_agent_id.cfe6536975: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_contact_center", "target_name": "dev", "node_id": "test.dbt_contact_center.unique_dim_agents_agent_id.cfe6536975"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with dbt_test__target as (
+
+  select agent_id as unique_field
+  from `dbt-saas-analytics`.`contact_center_data`.`dim_agents`
+  where agent_id is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m20:38:56.440369 [debug] [Thread-2 (]: On test.dbt_contact_center.not_null_fct_daily_call_metrics_call_date.82beb99ca8: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_contact_center", "target_name": "dev", "node_id": "test.dbt_contact_center.not_null_fct_daily_call_metrics_call_date.82beb99ca8"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select call_date
+from `dbt-saas-analytics`.`contact_center_data`.`fct_daily_call_metrics`
+where call_date is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m20:38:56.440929 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m20:38:56.441627 [debug] [Thread-3 (]: On test.dbt_contact_center.test_csat_logic: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "dbt_contact_center", "target_name": "dev", "node_id": "test.dbt_contact_center.test_csat_logic"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  -- CSAT should not be 5 (Excellent) if the call was Unresolved
+select
+    call_id,
+    csat_score,
+    resolution_status
+from `dbt-saas-analytics`.`contact_center_data`.`int_surveys_cleaned`
+where resolution_status = 'Unresolved' and csat_score = 5
+  
+  
+      
+    ) dbt_internal_test
+[0m20:38:56.442176 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m20:38:56.442727 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m20:38:56.445609 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m20:38:57.797515 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dbt-saas-analytics&j=bq:US:93085b56-ebb0-4783-b936-6414d4d44696&page=queryresults
+[0m20:38:57.812578 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dbt-saas-analytics&j=bq:US:2c55be93-5477-4756-a818-d6b3f46bb967&page=queryresults
+[0m20:38:57.813448 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dbt-saas-analytics&j=bq:US:4e524752-4f9a-42bf-ae3a-cbb8b63533bd&page=queryresults
+[0m20:38:58.069448 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=dbt-saas-analytics&j=bq:US:96678e6a-2074-4a06-ba38-7b3b94f195b6&page=queryresults
+[0m20:38:58.284121 [debug] [Thread-2 (]: SQL status: OK in 0.470 seconds
+[0m20:38:58.312685 [debug] [Thread-1 (]: SQL status: OK in 0.514 seconds
+[0m20:38:58.419560 [debug] [Thread-4 (]: SQL status: OK in 0.604 seconds
+[0m20:38:58.543234 [debug] [Thread-3 (]: SQL status: OK in 0.473 seconds
+[0m20:38:59.407940 [info ] [Thread-1 (]: 1 of 4 PASS not_null_dim_agents_agent_id ....................................... [[32mPASS[0m in 3.06s]
+[0m20:38:59.408756 [debug] [Thread-1 (]: Finished running node test.dbt_contact_center.not_null_dim_agents_agent_id.716629bb1b
+[0m20:38:59.431901 [info ] [Thread-2 (]: 2 of 4 PASS not_null_fct_daily_call_metrics_call_date .......................... [[32mPASS[0m in 3.08s]
+[0m20:38:59.432761 [debug] [Thread-2 (]: Finished running node test.dbt_contact_center.not_null_fct_daily_call_metrics_call_date.82beb99ca8
+[0m20:38:59.435945 [info ] [Thread-4 (]: 4 of 4 PASS unique_dim_agents_agent_id ......................................... [[32mPASS[0m in 3.08s]
+[0m20:38:59.436941 [debug] [Thread-4 (]: Finished running node test.dbt_contact_center.unique_dim_agents_agent_id.cfe6536975
+[0m20:38:59.507561 [info ] [Thread-3 (]: 3 of 4 PASS test_csat_logic .................................................... [[32mPASS[0m in 3.16s]
+[0m20:38:59.508382 [debug] [Thread-3 (]: Finished running node test.dbt_contact_center.test_csat_logic
+[0m20:38:59.510613 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m20:38:59.511648 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:38:59.512074 [debug] [MainThread]: Connection 'test.dbt_contact_center.not_null_dim_agents_agent_id.716629bb1b' was properly closed.
+[0m20:38:59.512457 [debug] [MainThread]: Connection 'test.dbt_contact_center.not_null_fct_daily_call_metrics_call_date.82beb99ca8' was properly closed.
+[0m20:38:59.512829 [debug] [MainThread]: Connection 'test.dbt_contact_center.test_csat_logic' was properly closed.
+[0m20:38:59.513194 [debug] [MainThread]: Connection 'test.dbt_contact_center.unique_dim_agents_agent_id.cfe6536975' was properly closed.
+[0m20:38:59.513661 [info ] [MainThread]: 
+[0m20:38:59.514114 [info ] [MainThread]: Finished running 4 data tests in 0 hours 0 minutes and 6.12 seconds (6.12s).
+[0m20:38:59.515442 [debug] [MainThread]: Command end result
+[0m20:38:59.568579 [debug] [MainThread]: Wrote artifact WritableManifest to /var/home/quazi/dbt-contact-center-analytics/target/manifest.json
+[0m20:38:59.571987 [debug] [MainThread]: Wrote artifact SemanticManifest to /var/home/quazi/dbt-contact-center-analytics/target/semantic_manifest.json
+[0m20:38:59.575224 [debug] [MainThread]: Wrote artifact OsiDocument to /var/home/quazi/dbt-contact-center-analytics/target/osi_document.json
+[0m20:38:59.583200 [debug] [MainThread]: Wrote artifact RunExecutionResult to /var/home/quazi/dbt-contact-center-analytics/target/run_results.json
+[0m20:38:59.583875 [info ] [MainThread]: 
+[0m20:38:59.584419 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m20:38:59.584875 [info ] [MainThread]: 
+[0m20:38:59.585381 [info ] [MainThread]: Done. PASS=4 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=4
+[0m20:38:59.586417 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": true, "command_wall_clock_time": 10.23065, "process_in_blocks": "474720", "process_kernel_time": 0.976512, "process_mem_max_rss": "267416", "process_out_blocks": "4480", "process_user_time": 6.685969}
+[0m20:38:59.587264 [debug] [MainThread]: Command `dbt test` succeeded at 20:38:59.587087 after 10.23 seconds
+[0m20:38:59.587944 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe428fc5690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe428fc55d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe42910ec90>]}
+[0m20:38:59.588578 [debug] [MainThread]: Flushing usage events
+[0m20:39:01.154540 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:49:19.754703 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc85eb61810>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc85eafd9d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc85eb60190>]}
+
+
+============================== 21:49:19.762038 | a5d2989f-aa6d-4aa6-8a12-7e9b953801e5 ==============================
+[0m21:49:19.762038 [info ] [MainThread]: Running with dbt=1.12.3
+[0m21:49:19.762939 [debug] [MainThread]: running dbt with arguments {'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'use_experimental_parser': 'False', 'quiet': 'False', 'invocation_command': 'dbt ', 'log_cache_events': 'False', 'version_check': 'True', 'indirect_selection': 'eager', 'fail_fast': 'False', 'log_path': '/home/quazi/dbt-contact-center-analytics/logs', 'cache_selected_only': 'False', 'warn_error': 'None', 'use_colors': 'True', 'introspect': 'True', 'target_path': 'None', 'write_json': 'True', 'no_print': 'None', 'profiles_dir': '/home/quazi/.dbt', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'maximum_seed_size_mib': '1', 'hints_enabled': 'True', 'static_parser': 'True', 'printer_width': '80', 'debug': 'False', 'empty': 'None'}
+[0m21:49:19.877495 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'a5d2989f-aa6d-4aa6-8a12-7e9b953801e5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc85ec77090>]}
+[0m21:49:19.899480 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m21:49:19.900832 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m21:49:19.902364 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_success": true, "command_wall_clock_time": 0.21968876, "process_in_blocks": "632", "process_kernel_time": 0.293003, "process_mem_max_rss": "117560", "process_out_blocks": "104", "process_user_time": 1.78393}
+[0m21:49:19.903045 [debug] [MainThread]: Command `cli deps` succeeded at 21:49:19.902925 after 0.22 seconds
+[0m21:49:19.903516 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc85eaeb4d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc85eb60f10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc85ea41150>]}
+[0m21:49:19.903971 [debug] [MainThread]: Flushing usage events
+[0m21:49:21.209520 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:39:38.833448 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f31c4bdb910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f31c4aebf10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f31c4aeac10>]}
+
+
+============================== 13:39:38.839127 | aec41cc1-199c-4a13-90b6-95332b026aab ==============================
+[0m13:39:38.839127 [info ] [MainThread]: Running with dbt=1.12.3
+[0m13:39:38.839819 [debug] [MainThread]: running dbt with arguments {'target_path': 'None', 'static_parser': 'True', 'version_check': 'True', 'fail_fast': 'False', 'log_format': 'default', 'printer_width': '80', 'quiet': 'False', 'profiles_dir': '/home/quazi/.dbt', 'use_colors': 'True', 'cache_selected_only': 'False', 'send_anonymous_usage_stats': 'True', 'debug': 'False', 'introspect': 'True', 'invocation_command': 'dbt ', 'write_json': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'hints_enabled': 'True', 'no_print': 'None', 'empty': 'None', 'warn_error': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'maximum_seed_size_mib': '1', 'log_cache_events': 'False', 'partial_parse': 'True', 'log_path': '/home/quazi/dbt-contact-center-analytics/logs'}
+[0m13:39:38.973309 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'aec41cc1-199c-4a13-90b6-95332b026aab', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f31c4b5d610>]}
+[0m13:39:38.994123 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m13:39:38.995582 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m13:39:38.997400 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_success": true, "command_wall_clock_time": 0.24482833, "process_in_blocks": "632", "process_kernel_time": 0.286382, "process_mem_max_rss": "117624", "process_out_blocks": "8", "process_user_time": 1.929835}
+[0m13:39:38.998179 [debug] [MainThread]: Command `cli deps` succeeded at 13:39:38.998033 after 0.25 seconds
+[0m13:39:38.998638 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f31c4b60d10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f31c4b272d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f31c4bda710>]}
+[0m13:39:38.999093 [debug] [MainThread]: Flushing usage events
+[0m13:39:40.324013 [debug] [MainThread]: An error was encountered while trying to flush usage events
