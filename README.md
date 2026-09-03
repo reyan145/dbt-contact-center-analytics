@@ -127,7 +127,7 @@ This was built as a portfolio project to demonstrate:
 **Quazi Aritra Reyan**
 
 - GitHub: [@reyan145](https://github.com/reyan145)
-- LinkedIn: [Profile](https://linkedin.com/in/quaz-reyan)
+- LinkedIn: [Profile](https://linkedin.com/in/quazi-reyan)
 
 ---
 
