@@ -30,7 +30,7 @@ The data feeds into a Power BI dashboard for real-time visibility.
 
 👉 **[View Power BI Dashboard](https://app.powerbi.com/view?r=eyJrIjoiY2EyY2RhYjUtNjRhNC00MDRmLWE1NzEtMzc4NDVmNGFmMDc0IiwidCI6IjJmODc0OTkzLTM0ZGMtNGVkZi1iNmRhLTZkMzllMjAyYzFlNyIsImMiOjEwfQ%3D%3D)**
 
-[![Dashboard screenshot](https://raw.githubusercontent.com/reyan145/dbt-contact-center-analytics/main/docs/dashboard.png)](https://app.powerbi.com/view?r=eyJrIjoiY2EyY2RhYjUtNjRhNC00MDRmLWE1NzEtMzc4NDVmNGFmMDc0IiwidCI6IjJmODc0OTkzLTM0ZGMtNGVkZi1iNmRhLTZkMzllMjAyYzFlNyIsImMiOjEwfQ%3D%3D)
+[![Dashboard screenshot](docs/dashboard.png)](https://app.powerbi.com/view?r=eyJrIjoiY2EyY2RhYjUtNjRhNC00MDRmLWE1NzEtMzc4NDVmNGFmMDc0IiwidCI6IjJmODc0OTkzLTM0ZGMtNGVkZi1iNmRhLTZkMzllMjAyYzFlNyIsImMiOjEwfQ%3D%3D)
 
 ---
 
